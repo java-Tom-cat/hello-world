@@ -27,7 +27,8 @@ public class UserController {
 		session.setAttribute("list",list);
 		//跳转jsp页面
 		// return userMapper.queryAll().toString();
-		 ModelAndView mView=new ModelAndView();
+		
+		ModelAndView mView=new ModelAndView();
 		
 		return mView;
 	}
@@ -37,9 +38,9 @@ public class UserController {
 	
 	@RequestMapping("/select")
 	public User query(HttpSession session) {
-		List<User> list=uService.queryAll();
+		List<User> list=uService.queryById(4);
 		session.setAttribute("list",list);
-		return list.get(0);
+		return list.get(2);
 	}
 	
 }
