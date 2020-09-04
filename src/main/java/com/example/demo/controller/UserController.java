@@ -21,7 +21,7 @@ public class UserController {
 	@Autowired
 	private UserMapper userMapper;
 
-	@RequestMapping("/test")//test为jsp文件名
+	@RequestMapping("/test")//test为文件名
 	public ModelAndView select(HttpSession session,HttpServletRequest rep) {
 		List<User> list=userMapper.queryAll();
 		session.setAttribute("list",list);
